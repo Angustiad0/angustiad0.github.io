@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap'); 
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    color: #fff;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 100%;
+    height: 48px;
+  }
+  
+  nav{
+    margin-left: auto;
+  }
+  
+  nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li{
+    display: inline;
+    margin-right: 20px;
+    padding: 1em
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #toggle-menu{
+    display: none;
+  }
+
+.panel1 {
+    background-color: #fff;
+    padding: 0px;
+}
+
+.hero-panel {
+    background: url('img/iniciativa.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 175px 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-panel h1 {
+    font-size: 36px;
+}
+
+.mensaje {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.titulo-mensaje h2 {
+    font-weight: bold;
+}
+
+.texto-mensaje p {
+    font-size: 16px;
+}
+
+.estudio {
+    background-color: #F2F3F5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.parrafo-izquierda {
+    flex: 1;
+    text-align: center;
+}
+
+.parrafo-derecha {
+    flex: 2;
+}
+
+.negrita-grande {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.componentes-estudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.componentes-estudio h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.componentes-estudio .cajas-rectangulares {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.componentes-estudio .caja-rectangular {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    height: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.componentes-estudio .caja-rectangular h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.componentes-estudio .caja-rectangular p {
+    font-size: 14px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.resultados-salud {
+    margin-top: 20px;
+    background-color: #d9d7d7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-resultados th, .tabla-resultados td {
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-resultados th {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+footer {
+    background-color: #F3F6EF;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer p {
+    font-weight: bold;
+  }
+  
+  .iconos-footer img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+
+@media screen and (max-width: 600px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    header .hamburger {
+        display: block;
+        width: 36px;
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 12px;
+    }
+    
+    header .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+    }
+    
+    #toggle-menu {
+        position: absolute;
+        left: -100px;
+        display: none;
+    }
+    
+    #toggle-menu:checked ~ nav {
+        transform: translateX(0%);
+    }
+
+    nav {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 90vw;
+        height: calc(100% - 52px);
+        background-color: #777;
+        box-shadow: 0 0 10px #333;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 20px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 1s linear, color 1s linear;
+    }
+
+    nav ul li a:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .panel1 {
+        background-color: #fff;
+        padding: 0px;
+    }
+
+    .hero-panel {
+        background: url('img/amas_de_casa.jpg') center/cover no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .hero-panel h1 {
+        font-size: 24px;
+    }
+
+    .mensaje {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .titulo-mensaje h2 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .texto-mensaje p {
+        font-size: 14px;
+    }
+
+    .estudio {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .parrafo-izquierda, .parrafo-derecha {
+        text-align: center;
+    }
+
+    .negrita-grande {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .componentes-estudio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .componentes-estudio h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .componentes-estudio .cajas-rectangulares {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .componentes-estudio .caja-rectangular {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+        width: calc(33.33% - 20px);
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .componentes-estudio .caja-rectangular h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .componentes-estudio .caja-rectangular p {
+        font-size: 14px;
+        height: 60px;
+        padding: 5px;
+        overflow: hidden;
+    }
+
+    .resultados-salud {
+        margin-top: 20px;
+        background-color: #d9d7d7;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .tabla-resultados {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .tabla-resultados th, .tabla-resultados td {
+        border-top: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .tabla-resultados th {
+        background-color: #4caf50;
+        color: #fff;
+    }
+}

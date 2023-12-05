@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos</title>
+    <link rel="stylesheet" type="text/css" href="contactanos.css">
+    <script src="contactanos.js"></script>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="toggle-menu" />
+        <label class="hamburger" for="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <a href="index.html">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="nuestrosProyectos.html">Proyectos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-panel">
+        <picture>
+            <img src="img/hpct.jpg" alt="hp contactenos" class="hero-image"/>
+        </picture>
+        <div class="titulo">
+            <h1>Contactenos</h1>
+        </div>
+    </section>
+
+    <section class="cuTxt">
+        <div>
+            <h2>No dude en escrbirnos</h2>
+            <p>Tiene consultas, desea contactar un maestro(a) fogonero o realizar un proyecto con nosotros.</p>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <form action="contactanos.html" method="get" id="formulario" class="row fullwidth flex-center">
+            <section class="col-6 col-6-m col-4-l">
+                <label for="txtNombre">Nombre</label>
+                <input type="text" name="txtNombre" id="txtNombre" placeholder="Escriba aquí su nombre" />
+                <label for="txtnumero">Numero de teléfono</label>
+                <input type="text" name="txtnuemro" id="txtnumero" placeholder="Escriba aquí su número de  telefono ">
+                <label for="seleccion">Seleccione un servicio</label>
+                <select name="seleccion" id="seleccion">
+                <option value="opcion1">Sobre estufas mejoradas</option>
+                <option value="opcion2">Contratar a un maestro/a fogonera</option>
+                <option value="opcion3">Colabora con nosotros</option> </select>
+                <label for="txtEmail">Email</label>
+                <input type="email" name="txtEmail" id="txtEmail" placeholder="Escriba aquí su correo electrónico" />
+                <label for="txtMensaje">Mensaje</label>
+                <textarea name="txtMensaje" id="txtMensaje" cols="30" rows="10" placeholder="Escriba aqui sus comentarios..."></textarea>
+                <button type="submit" name="btnEnviar">Enviar</button>
+            </section>
+        </form>
+    </section>
+
+    <section class="footer">
+        <footer>
+            <h3>También puede contactar con nosotros a través de:</h3>
+            <p>Teléfono: (504) 2226-4527</p>
+            <p>Email: contacto@ahdesa.org</p>
+        </footer>
+    </section>
+</body>
+</html>

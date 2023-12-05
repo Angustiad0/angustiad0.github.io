@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    color: #fff;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 100%;
+    height: 48px;
+  }
+  
+  nav{
+    margin-left: auto;
+  }
+  
+  nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li{
+    display: inline;
+    margin-right: 20px;
+    padding: 1em
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #toggle-menu{
+    display: none;
+  }
+
+.hero-panel {
+    background: url('img/hero_panel.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: left;
+    padding: 100px 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+.hero-panel h1 {
+    margin-left: 35px;
+    font-size: 34px;
+    padding-right: 30%;
+}
+
+
+.titulo{
+    text-align: center;
+    font-size: 25px;
+}
+
+.valores{
+    background-color: #acb979;
+    text-align: center; 
+    margin-top: 80px; 
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.tarjeta {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.tarjeta img {
+    height: auto;
+    border-radius: 8px;
+    max-width: 70x;
+    max-height: 70px;
+}
+
+.mision{
+    background: url('img/mision.jpg') center/cover no-repeat ;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+    margin-top: 80px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mision h1{
+    font-size: 45px;
+}
+
+.vision{
+    background: url('img/vision.jpg') center/cover no-repeat ;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+    margin-top: 80px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.vision h1{
+    font-size: 45px;
+}
+
+.basecontenido{
+    padding-left: 3%;
+    padding-right: 15%;
+    text-align: left;
+    display: block;
+    font-size: 15px;
+}
+
+.imagencontenido img{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+}
+
+.bcontenido{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.datosa{
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.datosb{
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.contenidoleft{
+    padding-left: 3%;
+    padding-right: 15%;
+    text-align: left;
+    display: block;
+    font-size: 15px;
+}
+
+.contenidoleftimg img{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+}
+
+.basecontenidoleft{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.contenidoright{
+    padding-left: 15%;
+    padding-right: 3%;
+    text-align: right;
+    display: block;
+    font-size: 15px;
+}
+
+.contenidorightimg img{
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+}
+
+.basecontenidoright{
+    display: flex;
+    align-items: center;
+    margin-right: 15%;
+    margin-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.noticias{
+    display: flex;
+    justify-content: space-around;
+}
+
+.proyectos{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #F3F6EF;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer p {
+    font-weight: bold;
+  }
+  
+  .iconos-footer img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+
+@media screen and (max-width: 600px) {
+
+    header .hamburger {
+        display: block;
+        width: 36px;
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 12px; 
+      }
+      
+      header .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+      }
+      
+      #toggle-menu {
+        position: absolute;
+        left: -100px;
+        display: none; 
+      }
+      
+      #toggle-menu:checked ~ nav {
+        transform: translateX(0%);
+      }
+      
+      nav {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 12rem;
+        height: calc(100% - 52px);
+        background-color: #777;
+        box-shadow: 0 0 10px #333;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      nav ul li {
+        border-bottom: 1px solid #fff;
+      }
+      
+      nav ul li a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 1s linear, color 1s linear;
+      }
+      
+      nav ul li a:hover {
+        background-color: #ccc;
+        color:#333;
+      }
+
+    .hero-panel {
+        padding: 60px 20px;
+    }
+
+    .hero-panel h1 {
+        margin-left: 0;
+        font-size: 24px; 
+        padding-right: 0;
+    }
+
+    .basecontenido {
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        display: block;
+        font-size: 15px;
+    }
+    
+    .imagencontenido img {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+    
+    .bcontenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .tarjeta {
+        padding: 10px; 
+        text-align: center;
+        flex: 1;
+        max-width: 100%; 
+        margin: 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    
+    .tarjeta img {
+        height: auto;
+        border-radius: 8px;
+        max-width: 100%;
+        max-height: 70px;
+    }
+
+    .mision {
+        padding: 60px 20px;
+    }
+
+    .mision h1 {
+        margin-left: 0;
+        font-size: 24px; 
+        padding-right: 0;
+    }
+    .vision {
+        padding: 60px 20px;
+    }
+
+    .vision h1 {
+        margin-left: 0;
+        font-size: 24px; 
+        padding-right: 0;
+    }
+
+    .datosa{
+        text-align: center;
+        align-items: center;
+        padding-top: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .datosb{
+        text-align: center;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .contenidoleft{
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        display: block;
+        font-size: 15px;
+    }
+    
+    .contenidoleftimg img{
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .basecontenidoleft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    .contenidoright{
+        padding-left: 3%;
+        padding-right: 3%;
+        text-align: center;
+        display: block;
+        font-size: 15px;
+    }
+    
+    .contenidorightimg img{
+        border-radius: 8px;
+        height: auto;
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .basecontenidoright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3%;
+        margin-right: 3%;
+        background-color: #f5f5f5;
+    } 
+}

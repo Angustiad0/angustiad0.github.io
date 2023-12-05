@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap'); 
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    color: #fff;
+    padding: 0%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .hamburger {
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1rem; /* Separación del logo */
+}
+
+header .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.logo img {
+    margin-left: 5px;
+    width: 100%;
+    height: 48px;
+}
+
+#toggle-menu {
+    position: absolute;
+    left: -100px;
+    display: none; /* Ocultar el checkbox */
+}
+
+#toggle-menu:checked ~ nav {
+    transform: translateX(0%); /* Mostrar el menú cuando el checkbox está marcado */
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    width: 90vw;
+    height: calc(100% - 52px);
+    background-color: #777;
+    box-shadow: 0 0 10px #333;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out; /* Animación para el menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 1s linear, color 1s linear;
+}
+
+nav ul li a:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+.hero-panel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.qaContainer{
+    padding: 2rem;
+    background-color: #F3F6EF;
+    border-radius: 4rem;
+    margin-top: 5rem;
+}
+
+.qaContainer .question h3{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.qaContainer .answer{ 
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+.qaContainer .answer1{ 
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+.qaContainer .answer2{ 
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+.qaContainer .answer3{ 
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+.qaContainer .answer4{ 
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 3rem;
+    background-color: white;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #F3F6EF;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer p {
+    font-weight: bold;
+  }
+  
+  .iconos-footer img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+
+@media screen and (min-width: 768px) {
+    /* Ocultar el menú hamburguesa en pantallas más grandes */
+    header .hamburger {
+        display: none;
+    }
+
+    /* Asegurar que el header se extienda a lo largo de todo el ancho */
+    header {
+        justify-content: space-between; /* Alinea los elementos a ambos extremos */
+        width: 100%;
+    }
+
+    /* Estilo para el menú de navegación */
+    nav {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        transform: translateX(0);
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100%; 
+        height: 48px;
+    }
+
+    .titulo {
+        font-size: 3.5rem;
+    }
+
+    /* Estilo para los elementos de la lista dentro del menú de navegación */
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Estilo para los enlaces dentro del menú de navegación */
+    nav ul li {
+        margin-right: 20px;
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* Opcional: Estilo para el hover de los enlaces */
+    nav ul li a:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+}

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap'); 
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    color: #fff;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 100%;
+    height: 48px;
+  }
+  
+  nav{
+    margin-left: auto;
+  }
+  
+  nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li{
+    display: inline;
+    margin-right: 20px;
+    padding: 1em
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #toggle-menu{
+    display: none;
+  }
+
+.logros {
+    background-color: #fff;
+    padding: 0px;
+}
+
+.hero-panel-logros {
+    background: url('img/Hp.jpg') center/cover no-repeat;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 175px 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-panel-logros h1 {
+    font-size: 36px;
+}
+
+.logro, .logro2 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.logro2{
+  background-color: #F2F3F5;
+}
+
+.logro img, .logro2 img {
+    width: 360px;
+    height: 220px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.logro img{
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+.logro2 img{
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.logro-info, .logro-info2 {
+    flex: 1;
+    text-align: left;
+}
+
+.logro-info{
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.logro-info2{
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+.logro-info, .logro-info2 h2 {
+    font-size: 24px;
+}
+
+.logro-info, .logro-info2 p{
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #F3F6EF;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer p {
+    font-weight: bold;
+  }
+  
+  .iconos-footer img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+
+@media screen and (max-width: 600px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    header .hamburger {
+        display: block;
+        width: 36px;
+        height: 36px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 12px; 
+      }
+      
+      header .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+      }
+      
+      #toggle-menu {
+        position: absolute;
+        left: -100px;
+        display: none; 
+      }
+      
+      #toggle-menu:checked ~ nav {
+        transform: translateX(0%);
+      }
+      
+      nav {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 12rem;
+        height: calc(100% - 52px);
+        background-color: #777;
+        box-shadow: 0 0 10px #333;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      nav ul li {
+        border-bottom: 1px solid #fff;
+      }
+      
+      nav ul li a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 1s linear, color 1s linear;
+      }
+      
+      nav ul li a:hover {
+        background-color: #ccc;
+        color:#333;
+      }
+
+    .hero-panel-logros {
+        background: url('img/Hp.jpg') center/cover no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .hero-panel-logros h1 {
+        font-size: 24px;
+    }
+
+    .logro, .logro2 {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logro img, .logro2 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 0;
+        order: 1;
+    }
+
+    .logro-info, .logro-info2 {
+        text-align: center;
+        order: 0;
+    }
+
+    .logro-info, .logro-info2 h2 {
+        font-size: 18px;
+    }
+
+    .logro-info, .logro-info2 p{
+        font-size: 14px;
+    }
+
+}
