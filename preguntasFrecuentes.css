@@ -9,12 +9,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-header{
+header {
+    margin-top: 15px;
+    margin-bottom: 10px;
     display: flex;
-    color: #fff;
-    padding: 0%;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between; /* Alinear elementos al inicio */
     align-items: center;
+    padding: 0%;
+    background-color: #fff;
 }
 
 header .hamburger {
@@ -23,7 +26,7 @@ header .hamburger {
     height: 36px;
     position: relative;
     cursor: pointer;
-    margin-right: 1rem; /* Separación del logo */
+    margin-right: 1rem;
 }
 
 header .hamburger span {
@@ -52,6 +55,7 @@ header .hamburger span {
 
 nav {
     position: absolute;
+    top: 52px;
     left: 0;
     width: 90vw;
     height: calc(100% - 52px);
@@ -66,6 +70,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: block;
 }
 
 nav ul li {
@@ -73,7 +78,8 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
+    padding: 1rem;
+    display: flex;
     text-decoration: none;
     color: #333;
     transition: background-color 1s linear, color 1s linear;
@@ -196,61 +202,48 @@ footer {
 
 @media screen and (min-width: 768px) {
     /* Ocultar el menú hamburguesa en pantallas más grandes */
+    .logo img{
+        margin-left: 5px;
+        width: 100%;
+        height: 48px;
+    }
+
+
+    header {
+        justify-content: space-between; /* Alinear elementos al inicio y fin */
+    }
+
+    header .hamburger,
+    .logo {
+        order: -1; /* Coloca el menú hamburguesa y logo a la izquierda */
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+        display: flex; /* Alineación horizontal de los enlaces */
+        justify-content: flex-end; /* Enlaces alineados a la derecha */
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+    }
+
+    nav ul li {
+        border-bottom: none;
+        margin-right: 20px; /* Espaciado entre enlaces */
+    }
+
     header .hamburger {
         display: none;
     }
 
-    /* Asegurar que el header se extienda a lo largo de todo el ancho */
-    header {
-        justify-content: space-between; /* Alinea los elementos a ambos extremos */
-        width: 100%;
-    }
-
-    /* Estilo para el menú de navegación */
-    nav {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        box-shadow: none;
-        transform: translateX(0);
-        display: flex;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 100%; 
-        height: 48px;
-    }
-
     .titulo {
         font-size: 3.5rem;
-    }
-
-    /* Estilo para los elementos de la lista dentro del menú de navegación */
-    nav ul {
-        display: flex;
-        align-items: center;
-    }
-
-    /* Estilo para los enlaces dentro del menú de navegación */
-    nav ul li {
-        margin-right: 20px;
-        border-bottom: none;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-        color: #333;
-    }
-
-    /* Opcional: Estilo para el hover de los enlaces */
-    nav ul li a:hover {
-        background-color: #ccc;
-        color: #333;
     }
 }
