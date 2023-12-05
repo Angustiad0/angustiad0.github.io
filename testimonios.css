@@ -10,13 +10,14 @@ body {
 }
 
 header {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     display: flex;
-    color: #fff;
-    padding: 0%;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between; /* Alinear elementos al inicio */
     align-items: center;
+    padding: 0%;
+    background-color: #fff;
 }
 
 header .hamburger {
@@ -25,7 +26,7 @@ header .hamburger {
     height: 36px;
     position: relative;
     cursor: pointer;
-    margin-right: 1rem; 
+    margin-right: 1rem;
 }
 
 header .hamburger span {
@@ -36,25 +37,25 @@ header .hamburger span {
     margin: 5px;
 }
 
-
 .logo img {
     margin-left: 5px;
     width: 100%;
     height: 48px;
 }
 
-
 #toggle-menu {
     position: absolute;
     left: -100px;
+    display: none; /* Ocultar el checkbox */
 }
 
 #toggle-menu:checked ~ nav {
-    transform: translateX(0%);
+    transform: translateX(0%); /* Mostrar el menú cuando el checkbox está marcado */
 }
 
 nav {
     position: absolute;
+    top: 52px;
     left: 0;
     width: 90vw;
     height: calc(100% - 52px);
@@ -62,12 +63,14 @@ nav {
     box-shadow: 0 0 10px #333;
     z-index: 100;
     transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out; /* Animación para el menú */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: block;
 }
 
 nav ul li {
@@ -75,7 +78,8 @@ nav ul li {
 }
 
 nav ul li a {
-    display: block;
+    padding: 1rem;
+    display: flex;
     text-decoration: none;
     color: #333;
     transition: background-color 1s linear, color 1s linear;
@@ -174,39 +178,52 @@ footer {
 
 /* Estilos para pantallas medianas y grandes */
 @media (min-width: 768px) {
-    header {
-        justify-content: space-between; /* Alinea el logo y el nav a los extremos */
+    .logo img{
+        margin-left: 5px;
         width: 100%;
+        height: 48px;
     }
 
-    header .hamburger {
-        display: none; /* Oculta el menú hamburguesa en pantallas más grandes */
+
+    .logo img{
+        margin-left: 5px;
+        width: 100%;
+        height: 48px;
+    }
+
+
+    header {
+        justify-content: space-between; /* Alinear elementos al inicio y fin */
+    }
+
+    header .hamburger,
+    .logo {
+        order: -1; /* Coloca el menú hamburguesa y logo a la izquierda */
     }
 
     nav {
-        all: unset;
-        display: block; /* Mostrar nav en pantallas medianas y grandes */
-        position: relative; /* Restablecer la posición para pantallas más grandes */
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
         transform: none;
+        display: flex; /* Alineación horizontal de los enlaces */
+        justify-content: flex-end; /* Enlaces alineados a la derecha */
     }
 
     nav ul {
-        display: flex; /* Alinea los enlaces horizontalmente */
-        justify-content: center;
-        padding: 0;
-        margin: 0;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
     }
 
     nav ul li {
-        margin-right: 20px;
+        border-bottom: none;
+        margin-right: 20px; /* Espaciado entre enlaces */
     }
 
-    nav ul li:last-child {
-        margin-right: 0;
-    }
-
-    nav ul li a {
-        padding: 0.5rem 1rem;
+    header .hamburger {
+        display: none;
     }
 
     .contenidoTestimonios, .contenidoTestimonios2 {
