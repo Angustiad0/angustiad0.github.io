@@ -137,7 +137,6 @@ header{
 .componentes-estudio .caja-rectangular p {
     font-size: 14px;
     padding: 5px;
-    overflow: hidden;
 }
 
 .resultados-salud {
@@ -342,7 +341,6 @@ footer {
         font-size: 14px;
         height: 60px;
         padding: 5px;
-        overflow: hidden;
     }
 
     .resultados-salud {
